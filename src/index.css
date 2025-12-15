@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 97%; /* #F7F8FA */
+    --foreground: 222 22% 20%; /* #2A303C */
+    --card: 240 100% 100%;
+    --card-foreground: 222 22% 20%;
+    --popover: 240 100% 100%;
+    --popover-foreground: 222 22% 20%;
+    --primary: 262 82% 57%; /* #6D28D9 */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 240 6% 90%;
+    --secondary-foreground: 222 22% 20%;
+    --muted: 240 6% 90%;
+    --muted-foreground: 224 9% 46%;
+    --accent: 240 6% 90%;
+    --accent-foreground: 222 22% 20%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 240 6% 85%;
+    --input: 240 6% 85%;
+    --ring: 262 82% 57%;
+    --radius: 0.75rem;
+    --sidebar-highlight: 206 58% 70%;
+    --scrollbar-thumb: #A0A0A0;
+    --scrollbar-track: #F1F1F1;
+    --scrollbar-thumb-hover: #7D7D7D;
+  }
+
+  html.dark,
+  .dark {
+    --background: 224 11% 12% !important; /* #1E1E20 */
+    --foreground: 210 40% 98% !important;
+    --card: 223 9% 21% !important; /* #2F3137 */
+    --card-foreground: 210 40% 98% !important;
+    --popover: 224 11% 12% !important;
+    --popover-foreground: 210 40% 98% !important;
+    --primary: 206 58% 70% !important; /* #a4c2df */
+    --primary-foreground: 223 9% 21% !important;
+    --secondary: 223 9% 21% !important;
+    --secondary-foreground: 210 40% 98% !important;
+    --muted: 223 9% 21% !important;
+    --muted-foreground: 215 20% 65% !important;
+    --accent: 223 9% 21% !important;
+    --accent-foreground: 210 40% 98% !important;
+    --destructive: 0 63% 31% !important;
+    --destructive-foreground: 210 40% 98% !important;
+    --border: 223 9% 28% !important;
+    --input: 223 9% 28% !important;
+    --ring: 206 58% 70% !important;
+    --sidebar-highlight: 206 58% 70% !important;
+    --scrollbar-thumb: #555 !important;
+    --scrollbar-track: #2f3137 !important;
+    --scrollbar-thumb-hover: #a4c2df !important;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* Fix icone calendario dark mode */
+.dark ::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+/* Scrollbar Custom */
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 6px;
+    border: 2px solid var(--scrollbar-track);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover);
+}

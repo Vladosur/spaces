@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 97%; /* #F7F8FA */
+    --foreground: 222 22% 20%; /* #2A303C */
+    --card: 240 100% 100%;
+    --card-foreground: 222 22% 20%;
+    --popover: 240 100% 100%;
+    --popover-foreground: 222 22% 20%;
+    --primary: 262 82% 57%; /* #6D28D9 */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 240 6% 90%;
+    --secondary-foreground: 222 22% 20%;
+    --muted: 240 6% 90%;
+    --muted-foreground: 224 9% 46%;
+    --accent: 240 6% 90%;
+    --accent-foreground: 222 22% 20%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 240 6% 85%;
+    --input: 240 6% 85%;
+    --ring: 262 82% 57%;
+    --radius: 0.75rem;
+    --sidebar-highlight: 206 58% 70%;
+    --scrollbar-thumb: #A0A0A0;
+    --scrollbar-track: #F1F1F1;
+    --scrollbar-thumb-hover: #7D7D7D;
+  }
+
+  .dark {
+    --background: 224 11% 12%; /* #1E1E20 */
+    --foreground: 210 40% 98%;
+    --card: 223 9% 21%; /* #2F3137 */
+    --card-foreground: 210 40% 98%;
+    --popover: 224 11% 12%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 206 58% 70%; /* #a4c2df */
+    --primary-foreground: 223 9% 21%;
+    --secondary: 223 9% 21%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 223 9% 21%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 223 9% 21%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 223 9% 28%;
+    --input: 223 9% 28%;
+    --ring: 206 58% 70%;
+    --sidebar-highlight: 206 58% 70%;
+    --scrollbar-thumb: #555;
+    --scrollbar-track: #2f3137;
+    --scrollbar-thumb-hover: #a4c2df;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* Fix icone calendario dark mode */
+.dark ::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+/* Scrollbar Custom */
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 6px;
+    border: 2px solid var(--scrollbar-track);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover);
+}
