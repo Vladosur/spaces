@@ -253,7 +253,7 @@ const DayTimelinePage: React.FC = () => {
                 <div 
                     className="grid"
                     style={{
-                        gridTemplateColumns: `50px repeat(${displayedRooms.length}, minmax(100px, 1fr))`,
+                        gridTemplateColumns: `60px repeat(${displayedRooms.length}, minmax(100px, 1fr))`,
                         gridTemplateRows: `40px repeat(${totalSlots}, ${ROW_HEIGHT}px)`,
                         minWidth: '100%', // Ensure it takes at least full width
                         width: 'max-content', // Allow it to grow if columns are wide

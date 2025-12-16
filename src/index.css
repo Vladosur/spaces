@@ -3,31 +3,33 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: 240 10% 97%; /* #F7F8FA */
-    --foreground: 222 22% 20%; /* #2A303C */
-    --card: 240 100% 100%;
-    --card-foreground: 222 22% 20%;
-    --popover: 240 100% 100%;
-    --popover-foreground: 222 22% 20%;
-    --primary: 262 82% 57%; /* #6D28D9 */
-    --primary-foreground: 210 40% 98%;
-    --secondary: 240 6% 90%;
-    --secondary-foreground: 222 22% 20%;
-    --muted: 240 6% 90%;
-    --muted-foreground: 224 9% 46%;
-    --accent: 240 6% 90%;
-    --accent-foreground: 222 22% 20%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 240 6% 85%;
-    --input: 240 6% 85%;
-    --ring: 262 82% 57%;
-    --radius: 0.75rem;
-    --sidebar-highlight: 206 58% 70%;
-    --scrollbar-thumb: #A0A0A0;
-    --scrollbar-track: #F1F1F1;
-    --scrollbar-thumb-hover: #7D7D7D;
+  :root,
+  html.light, 
+  .light {
+    --background: 240 10% 97% !important; /* #F7F8FA */
+    --foreground: 222 22% 20% !important; /* #2A303C */
+    --card: 240 100% 100% !important;
+    --card-foreground: 222 22% 20% !important;
+    --popover: 240 100% 100% !important;
+    --popover-foreground: 222 22% 20% !important;
+    --primary: 262 82% 57% !important; /* #6D28D9 */
+    --primary-foreground: 210 40% 98% !important;
+    --secondary: 240 6% 90% !important;
+    --secondary-foreground: 222 22% 20% !important;
+    --muted: 240 6% 90% !important;
+    --muted-foreground: 224 9% 46% !important;
+    --accent: 240 6% 90% !important;
+    --accent-foreground: 222 22% 20% !important;
+    --destructive: 0 84% 60% !important;
+    --destructive-foreground: 210 40% 98% !important;
+    --border: 240 6% 85% !important;
+    --input: 240 6% 85% !important;
+    --ring: 262 82% 57% !important;
+    --radius: 0.75rem !important;
+    --sidebar-highlight: 206 58% 70% !important;
+    --scrollbar-thumb: #A0A0A0 !important;
+    --scrollbar-track: #F1F1F1 !important;
+    --scrollbar-thumb-hover: #7D7D7D !important;
   }
 
   html.dark,

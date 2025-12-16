@@ -12,7 +12,7 @@ interface CalendarProps {
 }
 
 const Calendar: React.FC<CalendarProps> = ({ onDateClick, bookings }) => {
-  const [currentDate, setCurrentDate] = useState(new Date('2025-11-20T00:00:00'));
+  const [currentDate, setCurrentDate] = useState(new Date());
 
   const changeMonth = (delta: number) => {
     setCurrentDate(prevDate => {
